@@ -6,8 +6,10 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
+import { CounterContainer } from "../../common/counter/CounterContainer";
+import { GiStockpiles } from "react-icons/gi";
 
-const ItemDetail = ({ item }) => {
+const ItemDetail = ({ item, onAdd }) => {
   return (
     <div>
       {
@@ -29,9 +31,9 @@ const ItemDetail = ({ item }) => {
               $ {item.price} .-
             </Typography>
           </CardContent>
-          <CardActions></CardActions>
         </Card>
       }
+      <CounterContainer stock={item.stock} onAdd={onAdd} />
     </div>
   );
 };

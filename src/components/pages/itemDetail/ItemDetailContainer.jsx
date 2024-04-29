@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
 import { useEffect, useState } from "react";
 import { products } from "../../../productsMock";
+import { CounterContainer } from "../../common/counter/CounterContainer";
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
@@ -14,7 +15,13 @@ const ItemDetailContainer = () => {
     });
     getProduct.then((res) => setItem(res));
   }, [id]);
-  console.log(item);
-  return <ItemDetail item={item} />;
+  const onAdd = (cantidad) => {
+    console.log(item);
+    console.log(cantidad);
+    let objetoCompleto = { ...item, quantity: cantidad };
+    console.log(objetoCompleto); 
+  };
+
+  return <ItemDetail item={item} onAdd={onAdd} />;
 };
 export default ItemDetailContainer;

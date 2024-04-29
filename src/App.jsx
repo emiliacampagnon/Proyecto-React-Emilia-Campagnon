@@ -6,6 +6,7 @@ import ItemListContainer from "./components/pages/itemListContainer/ItemListCont
 import { Layout } from "./components/layout/Layout.jsx";
 import ItemDetailContainer from "./components/pages/itemDetail/ItemDetailContainer.jsx";
 import CartContainer from "./components/pages/cart/CartContainer.jsx";
+import Checkout from "./components/pages/checkout/Checkout.jsx";
 
 function App() {
   let nombre = "Viu";
@@ -16,9 +17,10 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/category/:name" element={<ItemListContainer />} />
-          
+
           <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
           <Route path="/cart" element={<CartContainer />} />
+          <Route path="/checkout" element={<Checkout />} />
 
           <Route path="*" element={<h1>Error 404</h1>} />
         </Route>

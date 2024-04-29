@@ -9,7 +9,11 @@ import { Link } from "react-router-dom";
 
 function BasicExample() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar
+      style={{ height: "150px" }}
+      expand="lg"
+      className="bg-body-tertiary"
+    >
       <Link to="/">
         <img
           src="https://res.cloudinary.com/dxzytrwpw/image/upload/v1711544966/vb_qtkbhz.png"
