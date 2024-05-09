@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.custom-badge {
+  background-color: transparent !important;
+  position: relative;
+  color: black !important;
+}

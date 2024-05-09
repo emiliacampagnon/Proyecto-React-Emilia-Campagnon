@@ -6,15 +6,16 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../../../context/CartContext";
+import CartWidget from "../../common/cartWidget/CartWidget";
 
 function BasicExample() {
+  const { cart } = useContext(CartContext);
+
   return (
-    <Navbar
-      style={{ height: "150px" }}
-      expand="lg"
-      className="bg-body-tertiary"
-    >
-      <Link to="/">
+    <Navbar style={{ height: "20" }} expand="lg" className="bg-body-tertiary">
+      <Link to="/" className="navbar-brand">
         <img
           src="https://res.cloudinary.com/dxzytrwpw/image/upload/v1711544966/vb_qtkbhz.png"
           width={150}
@@ -26,48 +27,26 @@ function BasicExample() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Link to="/" style={{ textDecoration: "none" }}>
-              <Nav.Link href="#home">Home</Nav.Link>
+            <Link to="/" className="nav-link">
+              Home
             </Link>
-
-            <Nav.Link href="#link">About Us</Nav.Link>
-            <NavDropdown title="Products" id="basic-nav-dropdown">
-              <Link
-                style={{ textDecoration: "none" }}
-                to="/category/calzaslargas"
-              >
-                <NavDropdown.Item href="#action/3.1">
-                  Calzas Largas
-                </NavDropdown.Item>
+            <span className="nav-link">About Us</span>
+            <NavDropdown title="Products" className="nav-link">
+              <Link to="/category/calzaslargas" className="dropdown-item">
+                Calzas Largas
               </Link>
-              <Link
-                style={{ textDecoration: "none" }}
-                to="/category/calzascortas"
-              >
-                <NavDropdown.Item href="#action/3.2">
-                  Calzas Cortas
-                </NavDropdown.Item>
+              <Link to="/category/calzascortas" className="dropdown-item">
+                Calzas Cortas
               </Link>
-
-              <Link style={{ textDecoration: "none" }} to="/category/tops">
-                <NavDropdown.Item href="#action/3.3">Tops</NavDropdown.Item>
+              <Link to="/category/tops" className="dropdown-item">
+                Tops
               </Link>
-
-              <NavDropdown.Divider />
             </NavDropdown>
           </Nav>
+          <Nav className="ms-auto">
+            <CartWidget />
+          </Nav>
         </Navbar.Collapse>
-        <Link
-          to="/cart"
-          style={{
-            color: "black",
-            display: "flex",
-            flexWrap: "nowrap",
-            textDecoration: "none",
-          }}
-        >
-          <FaCartShopping size={30} /> <h5>5</h5>
-        </Link>
       </Container>
     </Navbar>
   );

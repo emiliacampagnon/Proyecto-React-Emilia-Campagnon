@@ -1,21 +1,20 @@
 import {
   Button,
   Card,
-  CardActions,
   CardContent,
   CardMedia,
   Typography,
 } from "@mui/material";
 import { CounterContainer } from "../../common/counter/CounterContainer";
-import { GiStockpiles } from "react-icons/gi";
 
-const ItemDetail = ({ item, onAdd }) => {
+const ItemDetail = ({ item, onAdd, initial }) => {
   return (
-    <div>
+    <div style={{ display: "flex" }}>
       {
         <Card sx={{ width: 400, margin: 5 }}>
           <CardMedia
             sx={{ height: 400 }}
+            component={"img"}
             image={item.img}
             title="green iguana"
           />
@@ -33,7 +32,7 @@ const ItemDetail = ({ item, onAdd }) => {
           </CardContent>
         </Card>
       }
-      <CounterContainer stock={item.stock} onAdd={onAdd} />
+      <CounterContainer stock={item.stock} onAdd={onAdd} initial={initial} />
     </div>
   );
 };

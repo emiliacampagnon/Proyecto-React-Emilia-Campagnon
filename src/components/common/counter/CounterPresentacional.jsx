@@ -1,10 +1,20 @@
+import { Button, ButtonBase } from "@mui/material";
+import "./Counter.css";
+
 const CounterPresentacional = ({ restar, sumar, contador, onAdd }) => {
   return (
-    <div>
-      <button onClick={restar}>restar</button>
-      <h2>{contador}</h2>
-      <button onClick={sumar}>sumar</button>
-      <button onClick={() => onAdd(contador)}>Agregar al carrito</button>
+    <div style={{ display: "flex", flexDirection: "column", padding: "50px" }}>
+      <Button variant="outlined" onClick={restar}>
+        Menos
+      </Button>
+      <Button variant="text"> {contador} </Button>
+
+      <Button variant="outlined" onClick={sumar}>
+        Más
+      </Button>
+      <Button variant="contained" onClick={() => onAdd(contador)}>
+        Agregar al carrito
+      </Button>
     </div>
   );
 };
