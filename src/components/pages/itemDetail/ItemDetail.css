@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 .contenedorDetail {
-  display: flex;
+  display: flex !important;
+  flex-direction: column;
   max-width: 100%;
 }
 .typoDescription2 {
