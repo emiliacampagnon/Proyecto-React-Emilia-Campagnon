@@ -5,6 +5,7 @@
 }
 .contenedorDetail {
   display: flex;
+  max-width: 100%;
 }
 .typoDescription2 {
   text-align: justify;

@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 .cardContainer {
+  margin-left: 20px !important;
   width: 450px;
   display: flex !important;
   flex-direction: row !important;
