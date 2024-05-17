@@ -15,14 +15,14 @@ function BasicExample() {
     <Navbar expand="lg" className="navbarContainer">
       <Link to="/" className="navbar-brand">
         <img
-          style={{ margin: "30px" }}
+          style={{ margin: "20px" }}
           src="https://firebasestorage.googleapis.com/v0/b/react-emiliacampagnon.appspot.com/o/me!%20(6).png?alt=media&token=39830d3b-dd52-4b5a-a2c5-ca1976603fb4"
           width={180}
           alt="LogoViu"
         />
       </Link>
 
-      <Container>
+      <Container className="containerDesplegable">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">

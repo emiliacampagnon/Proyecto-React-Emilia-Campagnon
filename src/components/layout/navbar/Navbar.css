@@ -5,7 +5,10 @@
 }
 .navbarContainer {
   background-color: #e7e7e7;
-  min-height: 150px;
+  display: flex !important;
+  flex-direction: row !;
+
+  min-height: 140px;
 }
 
 .nav-link {
