@@ -15,7 +15,6 @@ const ItemDetailContainer = () => {
 
   const { addToCart, getQuantityById } = useContext(CartContext);
   let initial = getQuantityById(+id);
-  console.log(initial);
 
   useEffect(() => {
     let productsCollection = collection(db, "products");

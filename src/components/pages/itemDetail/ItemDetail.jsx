@@ -14,6 +14,7 @@ const ItemDetail = ({ item, onAdd, initial }) => {
       <div className="cardContainer">
         <Card className="cardCard">
           <CardMedia
+            component={"img"}
             image={item.img}
             title="imagen producto"
             className="imgCard"
@@ -28,13 +29,18 @@ const ItemDetail = ({ item, onAdd, initial }) => {
             >
               {item.title}
             </Typography>
-            <Typography className="typoDescription2"
+            <Typography
+              className="typoDescription2"
               variant="body2"
               color="text.secondary"
             >
               {item.description2}
             </Typography>
-            <Typography className="typoPrecio" variant="body2" color="text.secondary">
+            <Typography
+              className="typoPrecio"
+              variant="body2"
+              color="text.secondary"
+            >
               $ {item.price} .-
             </Typography>
           </CardContent>

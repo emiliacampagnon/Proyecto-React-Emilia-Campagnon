@@ -25,7 +25,6 @@ export const CheckoutFormik = () => {
         items: cart,
         total: total,
       };
-      console.log(obj);
 
       let ordersCollection = collection(db, "orders");
       addDoc(ordersCollection, obj)
