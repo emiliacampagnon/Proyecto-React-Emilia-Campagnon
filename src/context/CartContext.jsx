@@ -36,14 +36,6 @@ const CartContextProvider = ({ children }) => {
     let product = cart.find((el) => el.id === id);
     return product?.quantity;
   };
-
-  //   const getTotalPrice = ( ) =>{
-  //     for(let i = 0; i < cart.length; i++){
-  //       total = total + cart[i].quantity * cart[i].price
-
-  //   }
-  //   return total
-  // }
   const getTotalPrice = () => {
     let total = cart.reduce((acc, elemento) => {
       return acc + elemento.quantity * elemento.price;
