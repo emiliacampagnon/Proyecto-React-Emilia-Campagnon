@@ -15,7 +15,7 @@ function BasicExample() {
     <Navbar expand="lg" className="navbarContainer">
       <Link to="/" className="navbar-brand">
         <img
-          src="https://res.cloudinary.com/dxzytrwpw/image/upload/v1711544966/vb_qtkbhz.png"
+          src="https://firebasestorage.googleapis.com/v0/b/react-emiliacampagnon.appspot.com/o/me!%20(4).png?alt=media&token=753dac4d-bf7f-4ae7-89c4-21a51354e89d"
           width={150}
           alt="LogoViu"
         />
