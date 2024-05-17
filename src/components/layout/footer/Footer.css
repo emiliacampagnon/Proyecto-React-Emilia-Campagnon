@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.footerContainer {
+  margin: 0;
+  padding: 0;
+  background-color: #e7e7e7;
+  color: black;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  text-align: center;
+  width: 100%;
+}
+
+.iconosContainer {
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.logoFooter {
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 150px !important;
+  width: auto !important;
+}
+
+.icono {
+  color: white;
+  background-color: black;
+  border-radius: 50px;
+  margin: 10px;
+  padding: 5px;
+  width: 30px !important;
+  height: 30px !important;
+}

@@ -9,6 +9,7 @@ const CartContainer = () => {
 
   return (
     <Cart
+      classname="cardContainer"
       cart={cart}
       clearCart={clearCart}
       deleteById={deleteById}

@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+.navbarContainer {
+  background-color: #e7e7e7;
+  height: 180px;
+}
 
 .nav-link {
   display: flex;
@@ -25,4 +29,9 @@
 
 .cart-link h5 {
   margin-left: 5px;
+}
+
+.dropdown-menu a.dropdown-item.active,
+.dropdown-menu a.dropdown-item:active {
+  background-color: black !important;
 }

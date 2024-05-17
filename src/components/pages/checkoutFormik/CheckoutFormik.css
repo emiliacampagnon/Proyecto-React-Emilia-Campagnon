@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.finalizarCheckout {
+  background-color: #f0c30f !important;
+  color: white !important;
+  border: none;
+}

@@ -5,9 +5,14 @@ const ItemList = ({ items, error }) => {
   return (
     <div
       style={{
+        width: "95%",
         display: "flex",
-        justifyContent: "center",
+        flexDirection: "row",
         flexWrap: "wrap",
+        alignItems: "center",
+        justifyContent: "space-evenly",
+        padding: "10px",
+        margin: "10px",
       }}
     >
       {items.map(({ id, title, description, price, img, description2 }) => {

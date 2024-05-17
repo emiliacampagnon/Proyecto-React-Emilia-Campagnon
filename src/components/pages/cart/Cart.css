@@ -3,13 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-.buttoneliminarproducto {
-  width: 150px !important;
-  background-color: rgb(185, 24, 24) !important;
-  font-size: x-small;
-  margin-top: 20px !important;
-  position: relative;
+.cardContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card {
@@ -18,8 +16,80 @@
   margin: 10px;
   margin-top: 50px;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+.totalCart {
+  border-color: grey;
+  border: 1px;
+  background-color: lightgrey;
+  border-radius: 5px;
 }
 
 .cardcart {
   display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.contenedorCart {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 20px;
+}
+.buttoneliminarproducto {
+  color: white !important;
+}
+.finalizarCart {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+}
+.cartCart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cardContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.buttoneliminarproducto {
+  width: 150px !important;
+  background-color: rgb(185, 24, 24) !important;
+  font-size: x-small;
+  margin-top: 20px !important;
+  position: relative;
+}
+.buttonFinalizar {
+  width: 200px !important;
+  background-color: #f0c30f !important;
+  font-size: x-small;
+  margin-top: 20px !important;
+  position: relative;
+}
+.buttonVolver {
+  background-color: grey !important;
+  color: white !important;
+  font-size: small !important;
+  width: 200px !important;
+}
+.volverCart {
+  flex-direction: column;
+  padding: 100px;
+  margin: 100px;
+  display: flex;
+  height: 15rem;
+  align-items: center;
+  justify-content: center;
 }

@@ -1,6 +1,4 @@
-import { FaCartShopping } from "react-icons/fa6";
 import "./Navbar.css";
-
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -14,7 +12,7 @@ function BasicExample() {
   const { cart } = useContext(CartContext);
 
   return (
-    <Navbar style={{ height: "20" }} expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="navbarContainer">
       <Link to="/" className="navbar-brand">
         <img
           src="https://res.cloudinary.com/dxzytrwpw/image/upload/v1711544966/vb_qtkbhz.png"

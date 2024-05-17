@@ -4,6 +4,9 @@ import { useContext, useEffect, useState } from "react";
 import { products } from "../../../productsMock";
 import { CartContext } from "../../../context/CartContext";
 import Swal from "sweetalert2";
+import { db } from "../../../firebaseConfig";
+import { collection, doc, getDoc } from "firebase/firestore";
+import { red } from "@mui/material/colors";
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
@@ -15,16 +18,22 @@ const ItemDetailContainer = () => {
   console.log(initial);
 
   useEffect(() => {
-    let itemEncontrado = products.find((product) => product.id === +id);
-    const getProduct = new Promise((resolve, reject) => {
-      resolve(itemEncontrado);
+    let productsCollection = collection(db, "products");
+    let refDoc = doc(productsCollection, id);
+    getDoc(refDoc).then((res) => {
+      setItem({ id: res.id, ...res.data() });
     });
-    getProduct.then((res) => setItem(res));
+
+    // let itemEncontrado = products.find((product) => product.id === +id);
+    // const getProduct = new Promise((resolve, reject) => {
+    //   resolve(itemEncontrado);
+    // });
+    // getProduct.then((res) => setItem(res));
   }, [id]);
   const onAdd = (cantidad) => {
     let product = { ...item, quantity: cantidad };
     addToCart(product);
-    
+
     Swal.fire({
       position: "center",
       icon: "success",
