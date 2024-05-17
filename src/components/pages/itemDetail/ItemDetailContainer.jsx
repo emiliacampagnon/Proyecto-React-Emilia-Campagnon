@@ -3,7 +3,7 @@ import ItemDetail from "./ItemDetail";
 import { useContext, useEffect, useState } from "react";
 import { products } from "../../../productsMock";
 import { CartContext } from "../../../context/CartContext";
-import { InsertInvitationOutlined } from "@mui/icons-material";
+import Swal from "sweetalert2";
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
@@ -24,6 +24,14 @@ const ItemDetailContainer = () => {
   const onAdd = (cantidad) => {
     let product = { ...item, quantity: cantidad };
     addToCart(product);
+    
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Agregado al carrito",
+      showConfirmButton: false,
+      timer: 1500,
+    });
   };
 
   return <ItemDetail item={item} onAdd={onAdd} initial={initial} />;

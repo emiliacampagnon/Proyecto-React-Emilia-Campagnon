@@ -8,8 +8,26 @@ import {
 import { Link } from "react-router-dom";
 import "./Cart.css";
 import { lightBlue } from "@mui/material/colors";
+import Swal from "sweetalert2";
 
 const Cart = ({ cart, clearCart, deleteById, total }) => {
+  const clearCartAlert = () => {
+    Swal.fire({
+      title: "Estás seguro de vaciar tu carrito?",
+      showDenyButton: true,
+      confirmButtonText: true,
+      confirmButtonText: "Si",
+      denyButtonText: "No",
+    }).then((resultado) => {
+      if (resultado.isConfirmed) {
+        clearCart();
+        Swal.fire({
+          title: "El carrito se vació con éxito",
+          icon: "success",
+        });
+      } else if (resultado.isDenied);
+    });
+  };
   return (
     <div>
       <h1>Carrito</h1>
@@ -70,7 +88,7 @@ const Cart = ({ cart, clearCart, deleteById, total }) => {
         El total a pagar es ${total}
       </Typography>
       <h2> </h2>
-      <Button onClick={clearCart} variant="outlined">
+      <Button onClick={clearCartAlert} variant="outlined">
         Vaciar Carrito
       </Button>
 
